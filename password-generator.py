@@ -19,6 +19,8 @@ title_label.pack(pady=10)
 length_frame = tk.Frame(root)
 length_frame.pack(pady=5)
 tk.Label(length_frame, text="Password Length:").pack(side=tk.LEFT)
+length_spinbox = tk.Spinbox(length_frame, from_=4, to=50, textvariable=length_var, width=5)
+length_spinbox.pack(side=tk.LEFT, padx=5)
 
 # Main function for tkinter
 root.mainloop()
