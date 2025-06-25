@@ -9,6 +9,11 @@ def generate_password():
     num_count = int(numbers_var.get())
     special_count = int(specials_var.get())
 
+    # Create pool of characters
+    letters = string.ascii_letters
+    numebers = string.digits
+    specials = string.punctuation
+
 # Create the main window
 root = tk.Tk()
 root.title("Password Generator")
