@@ -37,6 +37,9 @@ def generate_password():
     for i in range (letter_count):
         password.append(random.choice(letters))
 
+    # Shuffle the password
+    random.shuffle(password)
+
 # Create the main window
 root = tk.Tk()
 root.title("Password Generator")
