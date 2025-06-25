@@ -29,6 +29,10 @@ def generate_password():
     for i in range (num_count):
         password.append(random.choice(numbers))
 
+        # Add required special characters
+    for i in range (special_count):
+        password.append(random.choice(specials))
+
 # Create the main window
 root = tk.Tk()
 root.title("Password Generator")
