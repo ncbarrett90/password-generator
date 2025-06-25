@@ -21,6 +21,9 @@ def generate_password():
     if letter_count < 0: 
         results_var.set("Error: Too many numbers/specials for password length!")
         return
+    
+    # Build password
+    password = []
 
 # Create the main window
 root = tk.Tk()
