@@ -11,7 +11,7 @@ def generate_password():
 
     # Create pool of characters
     letters = string.ascii_letters
-    numebers = string.digits
+    numbers = string.digits
     specials = string.punctuation
 
     # Calculate how many letters are needed
@@ -24,6 +24,10 @@ def generate_password():
     
     # Build password
     password = []
+
+    # Add required numbers
+    for i in range (num_count):
+        password.append(random.choice(numbers))
 
 # Create the main window
 root = tk.Tk()
