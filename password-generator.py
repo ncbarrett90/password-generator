@@ -14,6 +14,14 @@ def generate_password():
     numebers = string.digits
     specials = string.punctuation
 
+    # Calculate how many letters are needed
+    letter_count = length - num_count - special_count
+
+    # Validate input
+    if letter_count < 0: 
+        results_var.set("Error: Too many numbers/specials for password length!")
+        return
+
 # Create the main window
 root = tk.Tk()
 root.title("Password Generator")
@@ -23,6 +31,7 @@ root.geometry("400x300")
 length_var = tk.StringVar(value="12")
 numbers_var = tk.StringVar(value="2")
 specials_var = tk.StringVar(value="2")
+results_var = tk.StringVar(value="")
 
 # Title 
 title_label = tk.Label(root, text="Password Generator", font=("Arial", 16, "bold"))
