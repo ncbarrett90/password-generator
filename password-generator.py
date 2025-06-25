@@ -8,6 +8,9 @@ root = tk.Tk()
 root.title("Password Generator")
 root.geometry("400x300")
 
+# Variables to store user input
+length_var = tk.StringVar(value="12")
+
 # Title 
 title_label = tk.Label(root, text="Password Generator", font=("Arial", 16, "bold"))
 title_label.pack(pady=10)
