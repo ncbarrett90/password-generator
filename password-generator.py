@@ -40,6 +40,10 @@ def generate_password():
     # Shuffle the password
     random.shuffle(password)
 
+    # Convert list to a string and display in the GUI
+    final_password = ''.join(password)
+    results_var.set(final_password)
+
 # Create the main window
 root = tk.Tk()
 root.title("Password Generator")
